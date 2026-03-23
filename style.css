@@ -1,142 +1,67 @@
-/* ПЕРЕМЕННЫЕ */
-:root {
-    --primary: #1a365d;
-    --text: #2d3748;
-    --light: #f7fafc;
-    --border: #e2e8f0;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    color: var(--text);
-    background-color: #fff;
-}
-
-/* УМНЫЙ ЗАКРЕПЛЕННЫЙ HEADER */
-header {
-    background-color: var(--primary) !important;
-    color: #ffffff !important;
-    padding: 2.5rem 1rem;
+.header {
+    background-color: #1a365d;
+    color: #f7fafc;
+    padding: 20px;
     text-align: center;
-    margin: 0;
 }
 
-/* Если в HTML <header> пустой, CSS сам вставит текст */
-header:empty::before, header:not(:has(h1))::before {
-    content: "FINNAVIGATOR.CZ";
-    display: block;
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-}
-
-header:empty::after, header:not(:has(p))::after {
-    content: "Ваш экспертный гид по финансовой системе Чехии";
-    display: block;
-    margin-top: 0.5rem;
-    opacity: 0.9;
-    font-size: 1rem;
-}
-
-/* СТИЛИ ДЛЯ КОНТЕЙНЕРА И КНОПОК */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-.btn {
-    display: block;
-    width: 100%;
-    background: var(--primary);
-    color: white !important;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    transition: opacity 0.3s;
-    box-sizing: border-box;
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
-
-/* ПРЯМОУГОЛЬНИКИ БАНКОВ */
-.bank-card {
-    border: 2px solid var(--primary);
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-    background: var(--light);
-}
-
-.bank-header {
+.navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.8rem;
-    margin-bottom: 1rem;
+    justify-content: center;
+    background-color: #2b6cb0;
 }
 
-.bank-name {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--primary);
-    margin: 0;
+.navbar a {
+    color: #f7fafc;
+    padding: 14px 20px;
+    text-decoration: none;
 }
 
-.badge {
-    background: var(--primary);
-    color: white;
-    padding: 0.2rem 0.7rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 600;
+.navbar a:hover {
+    background-color: #1a365d;
+    transition: background-color 0.3s;
 }
 
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-@media (max-width: 600px) {
-    .info-grid { grid-template-columns: 1fr; }
-}
-
-.info-title {
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--primary);
-    margin-bottom: 4px;
-}
-
-.status-bar {
-    background: #fff5f5;
-    border: 1px solid #feb2b2;
-    color: #c53030;
-    padding: 0.8rem;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 800;
-    font-size: 0.85rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .footer {
-    margin-top: 4rem;
-    padding: 2rem 1rem;
-    border-top: 1px solid var(--border);
+    background-color: #2d3748;
+    color: #f7fafc;
     text-align: center;
-    font-size: 0.8rem;
-    color: #a0aec0;
+    padding: 10px;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 8px;
+    }
 }
